@@ -15,11 +15,12 @@ it to your current directory.
 This may take a while because stack is going to pull in a bunch of libraries.
 Once you have tmi built you should be able to run in with:
 
-    ./tm <args here>
+    ./tmi <args here>
 
 For example
 
-    ./tm p3.txt 0001110000
+    ./tmi p3.txt 0001110000
+    ./tmi p3.txt 0001110000 -v
 
 Hopefully this will print Accept to the screen. If it does not one of us
 screwed up.
@@ -46,7 +47,7 @@ the course. <input tape> is a list of symbols in Sigma. <flag> is
 one of two things.
 
     -t       test. runs some fuzz tests based on the langauge we are asked
-              to decide
+              to decide. (Disabled at Ben's request).
     -v       verbose. spits out each application of delta on a seperate line.
               useful for debugging a specific input.
 

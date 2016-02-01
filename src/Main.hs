@@ -26,7 +26,7 @@ main = do
           if checkInputString turingMachine inputTape
              then runInterpreter
                     (rest /= [] && head rest == "-v")
-                    (rest /= [] && head rest == "-t")
+                    False -- (rest /= [] && head rest == "-t")
                     turingMachine (tapeify inputTape)
 
           else putStrLn
@@ -37,7 +37,7 @@ main = do
       case runParser parseTuringMachine tm input of
         (Left err) -> print err
         (Right parseRes) -> putStrLn "Parses fine!"
-    [] -> putStrLn "Usage: ./tm <tm-file> <input-string (ones and zeros)> <flag>"
+    [] -> putStrLn "Usage: ./tmi <tm-file> <input-string (ones and zeros)> <flag>"
 
 runInterpreter ::
         Bool -> -- run with trace messages
@@ -50,8 +50,6 @@ runInterpreter trace test tm tape =
      then do
        putStrLn "You've activated my trap card!"
        testTM tm
-       -- putStrLn $ if runTM tm tape then "Accept" else "Reject"
-
   else putStrLn $ if runTM trace tm tape then "Accept" else "Reject"
 
 checkInputString :: Tm -> String -> Bool
