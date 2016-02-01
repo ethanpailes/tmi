@@ -5,6 +5,26 @@
 First you need to install [stack](https://github.com/commercialhaskell/stack).
 If you don't want to it is already on the cs servers.
 
+    git clone https://github.com/ethanpailes/tmi
+    cd tmi
+    stack build
+    cp $(stack exec which tm) .
+
+The last line is optional. It just copies the binary from where stack puts
+it to your current directory.
+This may take a while because stack is going to pull in a bunch of libraries.
+Once you have tmi built you should be able to run in with:
+
+    ./tm <args here>
+
+For example
+
+    ./tm p3.txt 0001110000
+
+Hopefully this will print Accept to the screen. If it does not one of us
+screwed up.
+
+
 # Usage
 
 This is pretty hacked together so I did not polish the command line

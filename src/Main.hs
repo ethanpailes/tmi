@@ -37,7 +37,7 @@ main = do
       case runParser parseTuringMachine tm input of
         (Left err) -> print err
         (Right parseRes) -> putStrLn "Parses fine!"
-    [] -> putStrLn "Usage: ./tm <tm-file> <input-string (ones and zeros)>"
+    [] -> putStrLn "Usage: ./tm <tm-file> <input-string (ones and zeros)> <flag>"
 
 runInterpreter ::
         Bool -> -- run with trace messages
