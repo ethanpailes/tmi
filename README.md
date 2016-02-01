@@ -8,7 +8,7 @@ If you don't want to it is already on the cs servers.
     git clone https://github.com/ethanpailes/tmi
     cd tmi
     stack build
-    cp $(stack exec which tm) .
+    cp $(stack exec which tmi) .
 
 The last line is optional. It just copies the binary from where stack puts
 it to your current directory.
@@ -22,13 +22,13 @@ For example
     ./tmi p3.txt 0001110000
     ./tmi p3.txt 0001110000 -v
 
-Hopefully this will print Accept to the screen. If it does not one of us
+Hopefully these will print Accept to the screen. If it does not one of us
 screwed up.
 
 
-### Getting tm on the Tufts CS servers
+### Getting tmi on the Tufts CS servers
 
-    cp /h/epaile01/tm .
+    cp /h/epaile01/tmi .
 
 I may end up fixing bugs at some point in which case I will try to
 update this version of the interpreter.
@@ -38,8 +38,10 @@ update this version of the interpreter.
 This is pretty hacked together so I did not polish the command line
 interface as much as I would have liked. Usage is as follows.
 
-    tm <Turing machine file> <input tape> [<flag>]
+    tmi <Turing machine file> <input tape> [<flag>]
 
+Note that the arguments are fixed position and the flag must be the
+third argument if it exists.
 Here <Turing machine file> is the name of your file. It should follow
 the format described by the perl scrip provided by the course staff.
 That script is the authority. My interpreter is not affiliated with
