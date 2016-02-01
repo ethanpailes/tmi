@@ -25,6 +25,13 @@ Hopefully this will print Accept to the screen. If it does not one of us
 screwed up.
 
 
+### Getting tm on the Tufts CS servers
+
+    cp /h/epaile01/tm .
+
+I may end up fixing bugs at some point in which case I will try to
+update this version of the interpreter.
+
 # Usage
 
 This is pretty hacked together so I did not polish the command line
