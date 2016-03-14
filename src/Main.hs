@@ -26,7 +26,7 @@ main = do
           if checkInputString turingMachine inputTape
              then runInterpreter
                     (rest /= [] && head rest == "-v")
-                    False -- (rest /= [] && head rest == "-t")
+                    (rest /= [] && head rest == "-t")
                     turingMachine (tapeify inputTape)
 
           else putStrLn
